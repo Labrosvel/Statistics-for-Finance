@@ -1,7 +1,0 @@
-# Random walk, sigma(w) = 1, with drift d = .2 (upper jagged line), without drift, d = 0
-# (lower jagged line), and straight (dashed) lines with slope d.
-set.seed(154) # so you can reproduce the results
-w = rnorm(200); x = cumsum(w) # two commands in one line
-wd = w +.2; xd = cumsum(wd)
-plot.ts(xd, ylim=c(-5,55), main="random walk", ylab='')
-lines(x, col=4); abline(h=0, col=4, lty=2); abline(a=0, b=.2, lty=2)
